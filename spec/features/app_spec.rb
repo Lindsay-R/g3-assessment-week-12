@@ -18,7 +18,7 @@ feature 'Cage Movies' do
     fill_in "Name", with: "Moonstruck"
     fill_in "Year", with: "1987"
     fill_in "Synopsis", with: "Moonstruck"
-    save_and_open_page
+    # save_and_open_page
     click_on "Create Movie"
     expect(page).to have_content("Task Movie was created successfully!")
   end
