@@ -1,0 +1,31 @@
+<%= form_for @movie, url: movies_path do |f| %>
+
+
+  <% if @movie.errors.any? %>
+    <ul class="errors">
+      <% @movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+<div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+
+<div>
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+</div>
+
+  <div>
+    <%= f.label :synopsis %>
+    <%= f.text_field :synopsis %>
+  </div>
+
+<div>
+  <%= f.submit "Create Movie"  %>
+</div>
+
+<% end %>
